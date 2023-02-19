@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.toggle-label .toggle-switch::after {
+    position: absolute;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: thin gray solid;
+    transition: all .05s linear;
+    background-color: white;
+    left: -1.5px;
+    top: -3px;
+}
+
+.toggle-label .toggle-inner::after {
+    position: absolute;
+    content: "No";
+    font-size: .8rem;
+    color: gray;
+    left: 25px;
+    transition: all .05s ease;
+}
+
+.toggle-label .toggle-inner::before {
+    position: absolute;
+    content: "Yes";
+    font-size: .8rem;
+    left: 5px;
+    transition: all .05s ease;
+    opacity: 0;
+}
+
+.toggle-cb:checked ~ .toggle-label .toggle-inner::after {
+    opacity: 0;
+}
+
+.toggle-cb:checked ~ .toggle-label .toggle-inner::before {
+    opacity: 1;
+    color: white;
+}
+
+.toggle-cb:checked ~ .toggle-label {
+    background-color: red;
+}
+
+
+
+
+.toggle-label {
+    position: relative;
+    display: block;
+    background-color: gainsboro;
+    height: 15px;
+    width: 50px;
+    border-radius: 10px;
+    border: thin gray solid;
+    
+}
+
+.toggle-cb {
+    display: none;
+}
+
+.toggle-cb:checked ~ .toggle-label .toggle-switch::after {
+    transform: translateX(35px);
+}
+

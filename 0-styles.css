@@ -1,0 +1,26 @@
+ul li {
+    background-image: url("./sprite.png");
+    /* background-size: cover; */
+    height: 380px;
+    width: 300px;
+    list-style: none;
+    background-repeat: no-repeat;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* column-gap: 50px; */
+    justify-content: space-between;
+}
+
+ul li:nth-child(2) {
+    background-position: -280px;
+}
+
+ul li:nth-child(3) {
+    background-position: -570px;
+}
